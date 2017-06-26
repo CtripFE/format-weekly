@@ -1,0 +1,26 @@
+{
+  "name": "format-email",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "example": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirreal/format-email.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mirreal/format-email/issues"
+  },
+  "homepage": "https://github.com/mirreal/format-email#readme",
+  "dependencies": {
+    "markdown": "^0.5.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.1.1"
+  }
+}
