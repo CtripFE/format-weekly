@@ -1,15 +1,16 @@
 const markdown = require('markdown').markdown
 const { readFile, writeFile } = require('./fs')
-
-console.log(markdown)
+const { formatZhihu, formatEmail } = require('./format')
 
 const writeFileAsync = async function(data) {
-  const json = JSON.stringify(markdown.parse(data))
-  const html = markdown.toHTML(data)
+  const json = markdown.parse(data)
+
+  const zhihuData = formatZhihu(json)
+  const emailData = formatEmail(json)
 
   try {
-    await writeFile('build/test.html', html)
-    await writeFile('build/test.json', json)
+    await writeFile('build/email.html', (markdown.toHTML(emailData)))
+    await writeFile('build/zhihu.html', markdown.toHTML(zhihuData))
 
     console.log('saved success')
   } catch (err) {

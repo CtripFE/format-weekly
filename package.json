@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mirreal/format-email#readme",
   "dependencies": {
+    "lodash": "^4.17.4",
     "markdown": "^0.5.0"
   },
   "devDependencies": {
