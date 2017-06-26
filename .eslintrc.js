@@ -6,9 +6,7 @@ module.exports = {
     amd: true,
     es6: true
   },
-  globals: {
-    'jstracker': true
-  },
+  globals: {},
   extends: ['eslint:recommended'],
   parser: 'babel-eslint',
   parserOptions: {
