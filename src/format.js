@@ -26,7 +26,7 @@ function formatEmail(data) {
         item[1].style = 'font-size:20px;color:#4e4e4e'
       }
 
-      // 链接样式
+      // link style
       if (item[0] === 'header' && item[1].level === 4) {
         item[2][1].style =
           'display:block;font-size:18px;color:#0081b5;line-height:24px;text-decoration:underline;font-weight:normal'

@@ -9,7 +9,7 @@ const writeFileAsync = async function(data) {
   const emailData = formatEmail(json)
 
   try {
-    await writeFile('build/email.html', (markdown.toHTML(emailData)))
+    await writeFile('build/email.html', markdown.toHTML(emailData))
     await writeFile('build/zhihu.html', markdown.toHTML(zhihuData))
 
     console.log('saved success')
