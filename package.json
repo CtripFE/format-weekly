@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "example": "node src/index.js"
+    "build": "node src/index.js"
   },
   "repository": {
     "type": "git",

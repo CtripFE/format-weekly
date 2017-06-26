@@ -13,7 +13,9 @@ function formatZhihu(data) {
 }
 
 function formatEmail(data) {
-  let emailData = data.map(item => {
+  const mdData = _.cloneDeep(data)
+
+  let emailData = mdData.map(item => {
     if (_.isArray(item)) {
       if (item[0] === 'header' && item[1].level === 1) {
         item[1].style =

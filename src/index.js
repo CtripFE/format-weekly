@@ -20,7 +20,7 @@ const writeFileAsync = async function(data) {
 
 const readFileAsync = async function() {
   try {
-    let result = await readFile('md/test.md')
+    let result = await readFile('md/weekly.md')
 
     writeFileAsync(result)
   } catch (err) {
