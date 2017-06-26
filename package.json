@@ -1,5 +1,5 @@
 {
-  "name": "format-email",
+  "name": "format-weekly",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CtripFE/format-email.git"
+    "url": "git+https://github.com/CtripFE/format-weekly.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CtripFE/format-email/issues"
+    "url": "https://github.com/CtripFE/format-weekly/issues"
   },
-  "homepage": "https://github.com/CtripFE/format-email#readme",
+  "homepage": "https://github.com/CtripFE/format-weekly#readme",
   "dependencies": {
     "lodash": "^4.17.4",
     "markdown": "^0.5.0"
