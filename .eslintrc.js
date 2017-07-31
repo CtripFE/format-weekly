@@ -66,6 +66,7 @@ module.exports = {
       let: 'never',
       const: 'never'
     }],
+    'no-var': 2,
     'padded-blocks': [2, 'never'],
     'quote-props': [2, 'consistent'],
     'valid-jsdoc': [2, {
