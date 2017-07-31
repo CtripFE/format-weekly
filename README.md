@@ -22,7 +22,7 @@ npm install format-weekly -g
 $ format-weekly
 // 指定文件
 $ format-weekly md/weekly.md
-// 制定输出目录
+// 指定输出目录
 $ format-weekly -o build md/weekly.md
 ```
 

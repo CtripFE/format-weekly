@@ -1,6 +1,6 @@
 {
   "name": "format-weekly",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "format weekly",
   "bin": {
     "format-weekly": "./bin/format-weekly.js"

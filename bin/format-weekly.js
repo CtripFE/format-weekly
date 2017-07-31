@@ -11,7 +11,7 @@ const mkdirsync = require('../lib/mkdir')
 program
   .version(pkg.version)
   .usage('[options] [file.md]')
-  .option('-o, --output [out]', 'configure the output directory', './')
+  .option('-o, --output [out]', 'configure the output directory', 'build')
   .parse(process.argv)
 
 const input = program.args[0] || 'md/weekly.md'
@@ -24,7 +24,7 @@ const writeFileAsync = async function(data) {
   const emailData = formatEmail(json)
 
   try {
-    mkdirsync(path.resolve(output))
+    mkdirsync(output)
 
     await writeFile(path.resolve(output, 'email.html'), markdown.toHTML(emailData))
     await writeFile(path.resolve(output, 'zhihu.html'), markdown.toHTML(zhihuData))
@@ -46,4 +46,3 @@ const readFileAsync = async function() {
 }
 
 readFileAsync()
-
