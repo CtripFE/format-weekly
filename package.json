@@ -5,9 +5,8 @@
   "bin": {
     "format-weekly": "./bin/format-weekly.js"
   },
-  "main": "./lib/index.js",
   "scripts": {
-    "start": "node .bin/format-weekly"
+    "start": "node ./bin/format-weekly"
   },
   "repository": {
     "type": "git",
@@ -19,6 +18,12 @@
     "url": "https://github.com/CtripFE/format-weekly/issues"
   },
   "homepage": "https://github.com/CtripFE/format-weekly#readme",
+  "contributors": [
+    {
+      "name": "Curtis",
+      "email": "http://chenbingshu.com/"
+    }
+  ],
   "dependencies": {
     "commander": "^2.11.0",
     "lodash": "^4.17.4",
