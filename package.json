@@ -1,22 +1,26 @@
 {
   "name": "format-weekly",
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.2.2",
+  "description": "format weekly",
+  "bin": {
+    "format-weekly": "./bin/format-weekly.js"
+  },
+  "main": "./lib/index.js",
   "scripts": {
-    "build": "node src/index.js"
+    "start": "node .bin/format-weekly"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CtripFE/format-weekly.git"
   },
-  "author": "",
+  "author": "mirreal",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CtripFE/format-weekly/issues"
   },
   "homepage": "https://github.com/CtripFE/format-weekly#readme",
   "dependencies": {
+    "commander": "^2.11.0",
     "lodash": "^4.17.4",
     "markdown": "^0.5.0"
   },
