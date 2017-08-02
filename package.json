@@ -1,6 +1,6 @@
 {
   "name": "fw2",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "format weekly",
   "main": "./bin/fw2.js",
   "bin": {
@@ -9,10 +9,7 @@
   "scripts": {
     "start": "node ./bin/fw2"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CtripFE/format-weekly.git"
-  },
+  "repository": "git+https://github.com/CtripFE/format-weekly.git",
   "author": "mirreal",
   "license": "MIT",
   "bugs": {
