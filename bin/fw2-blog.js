@@ -11,10 +11,13 @@ const { readFile, writeFile } = require('../lib/fs')
 const { formatBlog } = require('../lib/format')
 const mkdirsync = require('../lib/mkdir')
 
-program.option('-i, --input [in]', 'configure the input file', 'md/weekly.md').parse(process.argv)
+program
+  .option('-i, --input [in]', 'configure the input file', 'md/weekly.md')
+  .option('-o, --output [out]', 'configure the output directory', '../CtripFE.github.io/_posts/')
+  .parse(process.argv)
 
-const input = program.input || 'md/weekly.md'
-const output = 'build'
+const input = program.input
+const output = program.output
 
 const question = [
   {
@@ -53,7 +56,6 @@ const question = [
 
 inquirer.prompt(question).then(answers => {
   console.log(answers)
-  console.log(JSON.stringify(answers, null, '  '))
   readFileAsync(answers)
 })
 
@@ -63,7 +65,7 @@ const writeFileAsync = async function(data, answers) {
   try {
     mkdirsync(output)
 
-    const fileName = `${moment(answers.date).format('YYYY-MM-DD')}-weekly.md`
+    const fileName = `${moment(answers.date).format('YYYY-MM-DD')}-weeklyx.md`
     await writeFile(path.resolve(output, fileName), blogData)
 
     console.log('saved success')

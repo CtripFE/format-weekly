@@ -1,13 +1,13 @@
 {
   "name": "fw2",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "format weekly",
-  "main": "./bin/fw.js",
+  "main": "./bin/fw2.js",
   "bin": {
-    "format-weekly": "./bin/fw.js"
+    "fw2": "./bin/fw2.js"
   },
   "scripts": {
-    "start": "node ./bin/fw"
+    "start": "node ./bin/fw2"
   },
   "repository": {
     "type": "git",
