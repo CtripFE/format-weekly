@@ -3,18 +3,16 @@
 const path = require('path')
 const markdown = require('markdown').markdown
 const program = require('commander')
-const pkg = require('../package.json')
 const { readFile, writeFile } = require('../lib/fs')
 const { formatZhihu, formatEmail } = require('../lib/format')
 const mkdirsync = require('../lib/mkdir')
 
 program
-  .version(pkg.version)
-  .usage('[options] [file.md]')
+  .option('-i, --input [in]', 'configure the input file', 'md/weekly.md')
   .option('-o, --output [out]', 'configure the output directory', 'build')
   .parse(process.argv)
 
-const input = program.args[0] || 'md/weekly.md'
+const input = program.input
 const output = program.output
 
 const writeFileAsync = async function(data) {

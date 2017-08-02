@@ -1,8 +1,11 @@
 
-# 统一邮件格式以及知乎专栏
+# 周刊格式化
 
-[![npm version](https://img.shields.io/npm/v/format-weekly.svg?style=flat-square)](https://www.npmjs.com/package/format-weekly)
-[![npm downloads](https://img.shields.io/npm/dm/format-weekly.svg?style=flat-square)](https://www.npmjs.com/package/format-weekly)
+[![npm version](https://img.shields.io/npm/v/fw2.svg?style=flat-square)](https://www.npmjs.com/package/fw2)
+[![npm downloads](https://img.shields.io/npm/dm/fw2.svg?style=flat-square)](https://www.npmjs.com/package/fw2)
+
+* 统一邮件格式以及知乎专栏（格式化后，将生成两个文件，一个用于 email，一个用于 zhihu）
+* 生成 jeykll 格式的 markdown 文档
 
 ## 环境要求
 
@@ -13,32 +16,44 @@
 ### Installation
 
 ```sh
-npm install format-weekly -g
+npm install fw2 -g
 ```
 
 ### Execution
 
 ```sh
-$ format-weekly
-// 指定文件
-$ format-weekly md/weekly.md
-// 指定输出目录
-$ format-weekly -o build md/weekly.md
+$ fw2
+// 格式化 email 和 zhihu
+$ fw2 format
+// 指定格式化文件
+$ fw2 format -i md/weekly.md
+// 指定格式化后输出目录
+$ fw2 f -o build
+// 生成 Jekyll 文档
+$ fw2 blog
+// 指定生成 Jekyll 文档的原文件
+$ fw2 b -i md/weekly.md
 ```
 
 ### Help
 
 ```sh
-$ format-weekly -h
+Usage: fw2 [options] [command]
 
-Usage: format-weekly [options] [file.md]
+format ELSE weekly for email and zhihu
 
 
 Options:
 
-  -V, --version       output the version number
+  -V, --version  output the version number
+  -h, --help     output usage information
+  -i, --input [in]    configure the input file
   -o, --output [out]  configure the output directory
-  -h, --help          output usage information
-```
 
-生成两个文件，一个用于 email，一个用于 zhihu
+
+Commands:
+
+  format|f    format
+  blog|b      generate blog markdown
+  help [cmd]  display help for [cmd]
+```
