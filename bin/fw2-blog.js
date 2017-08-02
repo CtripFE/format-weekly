@@ -36,7 +36,16 @@ const question = [
     message: '请填写文章日期?',
     default: moment(Date.now()).format('YYYY-MM-DD HH:mm:ww'),
     filter(val) {
-      return moment(val).format('YYYY-MM-DD HH:mm:ww')
+      let dateStamp = ''
+
+      const result = moment(val).format('YYYY-MM-DD HH:mm:ww')
+      if (result !== 'Invalid date') {
+        dateStamp = result
+      } else {
+        dateStamp = moment(Date.now()).format('YYYY-MM-DD HH:mm:ww')
+      }
+
+      return dateStamp
     }
   },
   {
@@ -64,7 +73,7 @@ const writeFileAsync = async function(data, answers) {
   try {
     mkdirsync(output)
 
-    const fileName = `${moment(answers.date).format('YYYY-MM-DD')}-weeklyx.md`
+    const fileName = `${moment(answers.date).format('YYYY-MM-DD')}-weekly.md`
     await writeFile(path.resolve(output, fileName), blogData)
 
     console.log('saved success')
