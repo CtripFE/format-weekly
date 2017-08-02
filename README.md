@@ -1,8 +1,11 @@
 
-# 统一邮件格式以及知乎专栏
+# 周刊格式化
 
 [![npm version](https://img.shields.io/npm/v/fw2.svg?style=flat-square)](https://www.npmjs.com/package/fw2)
 [![npm downloads](https://img.shields.io/npm/dm/fw2.svg?style=flat-square)](https://www.npmjs.com/package/fw2)
+
+* 统一邮件格式以及知乎专栏（格式化后，将生成两个文件，一个用于 email，一个用于 zhihu）
+* 生成 jeykll 格式的 markdown 文档
 
 ## 环境要求
 
@@ -54,5 +57,3 @@ Commands:
   blog|b      generate blog markdown
   help [cmd]  display help for [cmd]
 ```
-
-生成两个文件，一个用于 email，一个用于 zhihu

@@ -55,7 +55,6 @@ const question = [
 ]
 
 inquirer.prompt(question).then(answers => {
-  console.log(answers)
   readFileAsync(answers)
 })
 
