@@ -23,14 +23,19 @@ npm install fw2 -g
 
 ```sh
 $ fw2
+
 // 格式化 email 和 zhihu
 $ fw2 format
+
 // 指定格式化文件
 $ fw2 format -i md/weekly.md
+
 // 指定格式化后输出目录
 $ fw2 f -o build
+
 // 生成 Jekyll 文档
 $ fw2 blog
+
 // 指定生成 Jekyll 文档的原文件
 $ fw2 b -i md/weekly.md
 ```
