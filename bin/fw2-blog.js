@@ -52,7 +52,7 @@ const question = [
     type: 'list',
     name: 'author',
     message: '请选择文章作者?',
-    choices: ['mirreal', 'CurtisCBS', 'stoneyong', 'StevenX911', 'sturloly']
+    choices: ['mirreal', 'CurtisCBS', 'stoneyong', 'StevenX911', 'Jade05']
   },
   {
     type: 'list',
